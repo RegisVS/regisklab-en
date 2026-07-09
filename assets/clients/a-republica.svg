@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title">
+  <title id="title">A Republica</title>
+  <path d="M126 222h388" stroke="#c8a24b" stroke-width="4" stroke-linecap="round"/>
+  <path d="M188 178h72v-56l36-34 42 40 34-26 80 76" fill="none" stroke="#f5f1e8" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="320" y="228" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="64" fill="#f5f1e8" letter-spacing="2">REPUBLICA</text>
+  <text x="320" y="267" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c8a24b" letter-spacing="9">A</text>
+</svg>

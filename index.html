@@ -4,10 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Regis Kraeski</title>
-    <meta
-      name="description"
-      content="Regis Kraeski - filming, VFX, editing and commercial videos for advertising."
-    />
+    <meta name="description" content="Regis Kraeski - filming, VFX, editing and commercial videos for advertising." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://regisvs.github.io/regisklab-en/" />
     <meta property="og:title" content="Regis Kraeski" />
@@ -328,8 +325,10 @@
         border-radius: 4px;
         padding: 12px 16px;
         background: rgb(5 5 5 / 0.34);
+        color: var(--white);
         text-decoration: none;
         white-space: nowrap;
+        cursor: pointer;
       }
 
       .button:hover {
@@ -409,7 +408,7 @@
       }
 
       .design .piece {
-        background: #f5f1e8;
+        background: transparent;
       }
 
       .rail-tools {
@@ -774,7 +773,7 @@
       }
 
       .legacy-gallery[data-project-gallery="design"] .legacy-slide {
-        background: #f5f1e8;
+        background: rgb(245 241 232 / 0.04);
       }
 
       .legacy-gallery[data-project-gallery="design"] .legacy-slide img {
@@ -890,6 +889,62 @@
         background: #000;
       }
 
+      .showreel-end-panel {
+        width: min(92vw, 680px);
+        display: none;
+        gap: clamp(18px, 2.4vw, 26px);
+        padding: clamp(24px, 3.4vw, 40px);
+        border: 1px solid rgb(245 241 232 / 0.18);
+        border-radius: 10px;
+        background:
+          linear-gradient(180deg, rgb(245 241 232 / 0.085), rgb(245 241 232 / 0.035)),
+          rgb(5 5 5 / 0.88);
+        box-shadow: 0 30px 110px rgb(0 0 0 / 0.48);
+      }
+
+      .showreel-end-panel h2 {
+        max-width: 11ch;
+        margin: 0;
+        color: var(--paper);
+        font-family: "Syne", sans-serif;
+        font-size: clamp(1.85rem, 7.6vw, 4rem);
+        line-height: 0.94;
+        text-transform: uppercase;
+      }
+
+      .showreel-end-panel p {
+        max-width: 42ch;
+        margin: 0;
+        color: var(--muted);
+        font-size: clamp(0.82rem, 1.4vw, 1.05rem);
+        line-height: 1.35;
+      }
+
+      .showreel-end-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .showreel-end-actions .button {
+        min-height: 58px;
+        background: rgb(245 241 232 / 0.06);
+      }
+
+      .showreel-end-actions .button:first-child {
+        border-color: rgb(242 107 47 / 0.72);
+        background: rgb(242 107 47 / 0.13);
+      }
+
+      .showreel-viewer.is-ended .showreel-player,
+      .showreel-viewer.is-ended .showreel-choice-panel {
+        display: none;
+      }
+
+      .showreel-viewer.is-ended .showreel-end-panel {
+        display: grid;
+      }
+
       .showreel-viewer.is-horizontal-mobile .showreel-player {
         width: 100vw;
         height: 100vh;
@@ -950,6 +1005,300 @@
 
       .hero + .strip {
         padding-top: clamp(36px, 4.8vw, 64px);
+      }
+
+      .clients-strip {
+        position: relative;
+        scroll-margin-top: 112px;
+        padding: clamp(54px, 7vw, 92px) clamp(18px, 5vw, 72px);
+        background: transparent;
+      }
+
+      .about-strip {
+        position: relative;
+        scroll-margin-top: 112px;
+        padding: clamp(46px, 6vw, 76px) clamp(18px, 5vw, 72px) clamp(24px, 3vw, 40px);
+      }
+
+      .about-inner {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+        display: grid;
+        gap: clamp(20px, 3vw, 34px);
+        justify-items: center;
+      }
+
+      .about-title {
+        display: grid;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .about-title .micro {
+        margin: 0;
+      }
+
+      .about-title h2 {
+        margin: 0;
+        color: var(--paper);
+        font-size: clamp(2.25rem, 5.5vw, 5.2rem);
+        line-height: 0.9;
+      }
+
+      .about-card {
+        position: relative;
+        width: min(980px, 100%);
+        min-height: clamp(210px, 23vw, 285px);
+        display: grid;
+        grid-template-columns: clamp(136px, 15vw, 190px) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(22px, 4vw, 52px);
+        padding: clamp(24px, 3vw, 40px) clamp(22px, 4.6vw, 58px);
+        border: 1px solid rgb(245 241 232 / 0.15);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgb(245 241 232 / 0.085), rgb(245 241 232 / 0.025)),
+          rgb(5 5 5 / 0.64);
+        box-shadow: 0 24px 90px rgb(0 0 0 / 0.24);
+      }
+
+      .about-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: clamp(24px, 3vw, 42px);
+        width: clamp(62px, 8vw, 112px);
+        height: 2px;
+        background: var(--accent);
+      }
+
+      .about-photo {
+        width: 100%;
+        aspect-ratio: 1;
+        border: 1px solid rgb(200 162 75 / 0.72);
+        border-radius: 50%;
+        padding: clamp(5px, 0.65vw, 8px);
+        background: rgb(2 2 2 / 0.58);
+        box-shadow: 0 20px 56px rgb(0 0 0 / 0.34);
+      }
+
+      .about-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        object-fit: cover;
+      }
+
+      .about-copy {
+        min-width: 0;
+      }
+
+      .about-card p {
+        margin: 0;
+        color: rgb(245 241 232 / 0.78);
+        font-size: clamp(0.98rem, 1.35vw, 1.14rem);
+        line-height: 1.55;
+      }
+
+      .about-card p + p {
+        margin-top: 1em;
+      }
+
+      .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: clamp(20px, 2.8vw, 32px);
+      }
+
+      .about-tags span {
+        border: 1px solid rgb(245 241 232 / 0.18);
+        border-radius: 999px;
+        padding: 8px 11px;
+        color: rgb(245 241 232 / 0.72);
+        font-size: 0.72rem;
+        font-weight: 850;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        background: rgb(245 241 232 / 0.04);
+      }
+
+      .clients-inner {
+        position: relative;
+        width: min(1280px, 100%);
+        margin: 0 auto;
+      }
+
+      .clients-head {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        margin-bottom: clamp(24px, 3vw, 42px);
+      }
+
+      .clients-head h2 {
+        margin: 0;
+        color: var(--paper);
+        font-size: clamp(2.4rem, 5vw, 5.4rem);
+        line-height: 1;
+        text-align: center;
+      }
+
+      .clients-grid {
+        --client-gap: clamp(8px, 1.2vw, 16px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--client-gap);
+      }
+
+      .client-tile {
+        position: relative;
+        box-sizing: border-box;
+        flex: 0 1 calc((100% - (var(--client-gap) * 3)) / 4);
+        min-width: 0;
+        min-height: clamp(154px, 16vw, 218px);
+        display: grid;
+        grid-template-rows: 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: clamp(18px, 2.2vw, 28px);
+        border: 1px solid rgb(200 162 75 / 0.62);
+        border-radius: 12px;
+        background:
+          linear-gradient(180deg, rgb(245 241 232 / 0.035), transparent),
+          rgb(2 2 2 / 0.68);
+        overflow: hidden;
+      }
+
+      .client-wide {
+        flex-basis: calc(((100% - (var(--client-gap) * 3)) / 4) * 2 + var(--client-gap));
+      }
+
+      .client-logo-frame {
+        width: 100%;
+        height: clamp(86px, 9.2vw, 132px);
+        display: grid;
+        place-items: center;
+      }
+
+      .client-logo-frame img {
+        display: block;
+        max-width: 112%;
+        max-height: 112%;
+        object-fit: contain;
+      }
+
+      .redbull-logo img {
+        max-width: 86%;
+        max-height: 86%;
+        transform: translateY(-30px);
+      }
+
+      .poster-logo img {
+        width: clamp(86px, 8.2vw, 122px);
+        height: clamp(86px, 8.2vw, 122px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .un-logo img {
+        max-width: 84%;
+        max-height: 76%;
+        transform: translateY(-10px);
+        filter: brightness(1.18);
+      }
+
+      .dark-logo img {
+        filter: brightness(0) invert(1);
+      }
+
+      .compact-logo img {
+        max-width: 88%;
+        max-height: 88%;
+      }
+
+      .wide-logo img {
+        max-width: 112%;
+      }
+
+      .r2-logo img {
+        max-width: 138%;
+        max-height: 138%;
+      }
+
+      .jameson-logo img {
+        max-width: 126%;
+        max-height: 126%;
+      }
+
+      .next-level-logo img {
+        max-width: 104%;
+        max-height: 104%;
+      }
+
+      .client-tile span {
+        display: block;
+        color: rgb(245 241 232 / 0.78);
+        font-size: clamp(0.82rem, 0.9vw, 0.94rem);
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        line-height: 1.2;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .clients-proof {
+        margin: clamp(28px, 4vw, 48px) auto 0;
+        color: var(--paper);
+        font-weight: 950;
+        letter-spacing: 0.04em;
+        line-height: 0.94;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .clients-proof::before,
+      .clients-proof::after {
+        content: "";
+      }
+
+      .clients-proof::before {
+        display: none;
+      }
+
+      .clients-proof::after {
+        display: block;
+        width: clamp(34px, 8vw, 96px);
+        height: 1px;
+        margin: 10px auto 0;
+        background: linear-gradient(90deg, transparent, rgb(200 162 75 / 0.85), transparent);
+      }
+
+      .clients-proof strong {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(10px, 2vw, 18px);
+        font-size: clamp(1.35rem, 3.6vw, 3.25rem);
+      }
+
+      .clients-proof strong::before,
+      .clients-proof strong::after {
+        content: "";
+        display: block;
+        flex: 0 0 clamp(34px, 8vw, 96px);
+        width: clamp(34px, 8vw, 96px);
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgb(200 162 75 / 0.85), transparent);
+      }
+
+      .clients-proof span {
+        display: block;
+        margin-top: 4px;
+        font-size: clamp(0.82rem, 1.6vw, 1.32rem);
+        letter-spacing: 0.18em;
       }
 
       .section-summary.strip-head,
@@ -1170,7 +1519,7 @@
       .design .project-cover img,
       .design-project .project-cover img {
         object-fit: contain;
-        background: #f5f1e8;
+        background: transparent;
       }
 
       .project-card:hover .project-cover img,
@@ -1282,7 +1631,7 @@
       .design .media-grid img,
       .design-project .media-grid img {
         object-fit: contain;
-        background: #f5f1e8;
+        background: transparent;
       }
 
       .video-expanded {
@@ -1371,6 +1720,24 @@
         margin: 0;
         font-size: clamp(1.05rem, 1.7vw, 1.55rem);
         line-height: 1.04;
+      }
+
+      .clip-tag {
+        display: none;
+        width: fit-content;
+        border: 1px solid rgb(242 107 47 / 0.5);
+        border-radius: 999px;
+        padding: 7px 11px;
+        color: var(--white);
+        background: rgb(242 107 47 / 0.12);
+        font-size: 0.68rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .clip-project[open] .clip-tag {
+        display: inline-flex;
       }
 
       .clip-meta {
@@ -1558,10 +1925,49 @@
         display: none;
       }
 
+      @media (max-width: 1360px) {
+        .nav {
+          gap: 10px;
+        }
+
+        .nav a {
+          min-height: 50px;
+          padding: 14px 18px;
+          font-size: 0.92rem;
+        }
+      }
+
       @media (max-width: 980px) {
+        .nav {
+          gap: 8px;
+        }
+
+        .nav a {
+          min-height: 48px;
+          padding: 13px 16px;
+          font-size: 0.9rem;
+        }
+
         .strip-head,
         .videos .strip-head {
           grid-template-columns: 1fr;
+        }
+
+        .clients-head {
+          align-items: start;
+          justify-content: center;
+        }
+
+        .clients-grid {
+          --client-gap: clamp(8px, 1.2vw, 16px);
+        }
+
+        .client-tile {
+          flex-basis: calc((100% - (var(--client-gap) * 2)) / 3);
+        }
+
+        .client-wide {
+          flex-basis: calc(((100% - (var(--client-gap) * 2)) / 3) * 2 + var(--client-gap));
         }
 
         .process-grid {
@@ -1588,6 +1994,43 @@
       @media (max-width: 760px) {
         .strip {
           padding-inline: 18px;
+        }
+
+        .clients-strip {
+          padding-inline: 18px;
+        }
+
+        .about-strip {
+          padding-inline: 18px;
+        }
+
+        .about-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .about-card {
+          grid-template-columns: 1fr;
+          justify-items: center;
+          gap: 22px;
+          padding: 28px 22px 30px;
+        }
+
+        .about-photo {
+          width: min(48vw, 172px);
+        }
+
+        .clients-grid {
+          --client-gap: 10px;
+        }
+
+        .client-wide {
+          flex-basis: calc((100% - var(--client-gap)) / 2);
+        }
+
+        .client-tile {
+          flex-basis: calc((100% - var(--client-gap)) / 2);
+          min-height: 146px;
+          padding: 16px;
         }
 
         .project-grid {
@@ -1744,13 +2187,45 @@
           font-size: 0.76rem;
         }
 
+        .showreel-end-panel h2 {
+          max-width: 14ch;
+          font-size: clamp(1.22rem, 6.4vw, 1.78rem);
+          line-height: 1.24;
+        }
+
         .contact h2 {
           font-size: clamp(1.9rem, 9.5vw, 3.2rem);
+        }
+
+        .clients-proof strong {
+          gap: 12px;
+          font-size: clamp(1.02rem, 5.2vw, 1.36rem);
+          white-space: nowrap;
+        }
+
+        .clients-proof strong::before,
+        .clients-proof strong::after {
+          flex-basis: clamp(34px, 12vw, 54px);
+          width: clamp(34px, 12vw, 54px);
+          min-width: 34px;
+          height: 1px;
+          background: linear-gradient(90deg, transparent, rgb(200 162 75 / 0.9), transparent);
+        }
+
+        .clients-proof::after {
+          width: clamp(42px, 15vw, 68px);
+          height: 1px;
+          margin-top: 10px;
+          background: linear-gradient(90deg, transparent, rgb(200 162 75 / 0.9), transparent);
         }
 
         .button {
           width: 100%;
           font-size: 0.74rem;
+        }
+
+        .showreel-end-actions {
+          grid-template-columns: 1fr;
         }
 
         .contact .button {
@@ -1985,20 +2460,29 @@
 
         .project-body,
         .project-card[open] .project-body {
-          padding: 12px;
+          gap: 5px;
+          padding: 10px;
         }
 
         .project-card[open] .project-title-row h3,
+        .video-project > .project-summary h3,
         .project-title-row h3 {
-          font-size: 1rem;
+          font-size: 0.9rem;
+          line-height: 1.08;
         }
 
         .project-meta {
-          font-size: 0.58rem;
+          font-size: 0.54rem;
+          letter-spacing: 0.08em;
+        }
+
+        .project-title-row {
+          gap: 8px;
         }
 
         .project-expand {
-          width: 30px;
+          width: 26px;
+          font-size: 0.96rem;
         }
 
         .project-card[open] .project-description {
@@ -2033,11 +2517,36 @@
         }
 
         .clip-copy h4 {
-          font-size: 0.96rem;
+          font-size: 0.88rem;
+          line-height: 1.08;
         }
 
         .clip-meta {
-          font-size: 0.56rem;
+          font-size: 0.52rem;
+          letter-spacing: 0.08em;
+        }
+
+        .clip-expand {
+          right: 8px;
+          bottom: 8px;
+          width: 28px;
+          font-size: 1rem;
+        }
+
+        .section-summary {
+          min-height: 82px;
+          gap: 14px;
+          padding: 20px 18px;
+        }
+
+        .section-summary h2 {
+          font-size: clamp(1.22rem, 6.7vw, 1.72rem);
+          line-height: 1.02;
+        }
+
+        .section-expand {
+          width: 42px;
+          font-size: 1.35rem;
         }
 
         .clip-panel {
@@ -2046,6 +2555,76 @@
 
         .reference-grid {
           grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .showreel-end-panel h2 {
+          max-width: 15ch;
+          font-size: clamp(1.16rem, 6vw, 1.52rem);
+          line-height: 1.28;
+        }
+
+        .project-summary,
+        .project-card[open] .project-summary {
+          grid-template-columns: 76px minmax(0, 1fr);
+          min-height: 76px;
+        }
+
+        .project-cover,
+        .video-project .project-cover,
+        .project-card[open] .project-cover,
+        .project-card[open].video-project .project-cover {
+          width: 76px;
+          min-height: 76px;
+        }
+
+        .project-body,
+        .project-card[open] .project-body {
+          padding: 9px;
+        }
+
+        .project-card[open] .project-title-row h3,
+        .video-project > .project-summary h3,
+        .project-title-row h3 {
+          font-size: 0.82rem;
+        }
+
+        .project-expand {
+          width: 24px;
+          font-size: 0.9rem;
+        }
+
+        .section-summary {
+          min-height: 76px;
+          gap: 10px;
+          padding: 18px 16px;
+        }
+
+        .section-summary h2 {
+          font-size: clamp(1.08rem, 6.2vw, 1.42rem);
+        }
+
+        .section-expand {
+          width: 36px;
+          font-size: 1.18rem;
+        }
+
+        .clip-summary {
+          grid-template-columns: 82px minmax(0, 1fr);
+          min-height: 78px;
+        }
+
+        .clip-thumb {
+          min-height: 78px;
+        }
+
+        .clip-copy {
+          padding: 9px 10px;
+        }
+
+        .clip-copy h4 {
+          font-size: 0.82rem;
         }
       }
     </style>
@@ -2059,7 +2638,8 @@
         <a href="#cinematic-vfx">Cinematic & VFX</a>
         <a href="#nature-wildlife">3D/Animation</a>
         <a href="#sports-performance">Sports</a>
-        <a href="assets/resume-regis-2026.pdf" data-cv-open>Resume</a>
+        <a href="#about">About</a>
+        <a href="#clients">Clients</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -2105,6 +2685,116 @@
       <section class="strip videos" id="videos">
         <div class="section-panel">
           <div class="project-grid" data-video-projects aria-label="Commercial video categories"></div>
+        </div>
+      </section>
+
+      <section class="about-strip" id="about" aria-labelledby="about-title">
+        <div class="about-inner">
+          <div class="about-title">
+            <h2 id="about-title">About</h2>
+          </div>
+          <div class="about-card">
+            <div class="about-photo">
+              <img src="assets/regis-kraeski-about.jpg" alt="Portrait of Regis Kraeski" loading="lazy" decoding="async" />
+            </div>
+            <div class="about-copy">
+              <p>I am Regis Kraeski, an audiovisual creative focused on commercial videos, institutional films and branded content. I combine filming, direction, editing, VFX, design and AI tools to turn campaigns, products and ideas into visual pieces with impact.</p>
+              <p>I develop projects for brands, artists, institutions and businesses across different segments, with deliverables designed for social platforms, presentations, launches and campaigns.</p>
+              <div class="about-tags" aria-label="Specialties">
+                <span>Filming</span>
+                <span>VFX</span>
+                <span>Editing</span>
+                <span>Design</span>
+                <span>Creative AI</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients-strip" id="clients" aria-labelledby="clients-title">
+        <div class="clients-inner">
+          <div class="clients-head">
+            <h2 id="clients-title">Clients</h2>
+          </div>
+          <div class="clients-grid" aria-label="Clients and served projects">
+            <article class="client-tile">
+              <div class="client-logo-frame redbull-logo">
+                <img src="assets/clients/red-bull.svg" alt="Red Bull Brasilia" loading="lazy" decoding="async" />
+              </div>
+              <span>Red Bull Brasilia</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame r2-logo">
+                <img src="assets/clients/r2.svg" alt="R2" loading="lazy" decoding="async" />
+              </div>
+              <span>R2</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame un-logo">
+                <img src="assets/clients/onu-brasil.svg" alt="ONU Brasilia" loading="lazy" decoding="async" />
+              </div>
+              <span>ONU Brasilia</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame poster-logo">
+                <img src="assets/clients/a-republica.png" alt="A Republica" loading="lazy" decoding="async" />
+              </div>
+              <span>A Republica</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame poster-logo">
+                <img src="assets/clients/jean-tassy.jpg" alt="Jean Tassy" loading="lazy" decoding="async" />
+              </div>
+              <span>Jean Tassy</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame poster-logo">
+                <img src="assets/clients/plantae-band.png" alt="O PlantaE" loading="lazy" decoding="async" />
+              </div>
+              <span>O PlantaE</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame">
+                <img src="assets/clients/aje-df.png" alt="AJE-DF" loading="lazy" decoding="async" />
+              </div>
+              <span>AJE-DF</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame">
+                <img src="assets/clients/jusbrasil.svg" alt="Jusbrasil" loading="lazy" decoding="async" />
+              </div>
+              <span>JusBrasil</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame jameson-logo">
+                <img src="assets/clients/jameson-black-barrel.svg" alt="Jameson Black Barrel" loading="lazy" decoding="async" />
+              </div>
+              <span>Jameson Black Barrel</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame">
+                <img src="assets/clients/brasilia-office.png" alt="Brasilia Office" loading="lazy" decoding="async" />
+              </div>
+              <span>Brasilia Office</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame compact-logo">
+                <img src="assets/clients/vital-implantes.webp" alt="Vital Implantes" loading="lazy" decoding="async" />
+              </div>
+              <span>Vital Implantes</span>
+            </article>
+            <article class="client-tile">
+              <div class="client-logo-frame wide-logo next-level-logo">
+                <img src="assets/clients/next-level-sports.png" alt="Next Level Sports" loading="lazy" decoding="async" />
+              </div>
+              <span>Next Level Sports</span>
+            </article>
+          </div>
+          <div class="clients-proof" aria-label="Over 100 projects delivered in Brasilia DF">
+            <strong>100+ projects</strong>
+            <span>delivered in Brasilia - DF</span>
+          </div>
         </div>
       </section>
 
@@ -2202,6 +2892,14 @@
         preload="metadata"
         poster="assets/video-posters/ai/hero-ai-showcase.jpg"
       ></video>
+      <div class="showreel-end-panel" role="dialog" aria-label="Showreel end">
+        <h2>Let's create your next video?</h2>
+        <p>Have an idea, product or campaign that needs a little magic?</p>
+        <div class="showreel-end-actions">
+          <a class="button" href="https://wa.me/5561981638256?text=Hi%2C%20Regis.%20I%20want%20to%20request%20a%20quote%20for%20a%20video%20project." rel="noreferrer">Request a quote</a>
+          <button class="button" type="button" data-showreel-explore>Explore more</button>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -2215,6 +2913,7 @@
             { title: "Red Bolt", src: "assets/videos/ai/red-bolt-commercial.mp4", references: [
               { title: "Product character sheet", src: "assets/process/ai/red-bolt-product-character-sheet.png" },
             ] },
+            { title: "Jameson", src: "assets/videos/jameson-planned-heat.mp4", poster: "assets/video-posters/jameson-black-barrel-poster.jpg", tag: "Live Action + AI/VFX" },
             { title: "Cuisine", src: "assets/videos/ai/cuisine-cook1.mp4", videos: [
               { title: "Cook 1", src: "assets/videos/ai/cuisine-cook1.mp4" },
               { title: "Kitchen prep", src: "assets/videos/ai/cuisine-cooks2.mp4" },
@@ -2238,7 +2937,7 @@
               { title: "Tankseed", src: "assets/videos/ai/cinematic-vfx-tank.mp4" },
               { title: "Battlefield soldiers", src: "assets/videos/ai/cinematic-vfx-soldier.mp4" },
             ] },
-            { title: "Concept", src: "assets/videos/ai/cinematic-vfx-glass-forest.mp4", videos: [
+            { title: "Concept", src: "assets/videos/ai/cinematic-vfx-glass-forest.mp4", poster: "assets/video-posters/ai/cinematic-vfx-concept.jpg", videos: [
               { title: "Glass Forest", src: "assets/videos/ai/cinematic-vfx-glass-forest.mp4" },
               { title: "Lantern Forest", src: "assets/videos/ai/cinematic-vfx-lantree.mp4" },
               { title: "Sea Burst", src: "assets/videos/ai/cinematic-vfx-sea-burst.mp4" },
@@ -2279,8 +2978,8 @@
               { title: "Night car shot", src: "assets/videos/ai/sports-performance-car.mp4" },
             ] },
             { title: "Dance", src: "assets/videos/ai/sports-performance-dancer.mp4", videos: [
-              { title: "Dancer spotlight", src: "assets/videos/ai/sports-performance-dancer.mp4" },
-              { title: "Dance floor", src: "assets/videos/ai/sports-performance-dancer2.mp4" },
+              { title: "Dance", src: "assets/videos/ai/sports-performance-dancer.mp4" },
+              { title: "Dance", src: "assets/videos/ai/sports-performance-dancer2.mp4" },
             ] },
             { title: "Basketball", src: "assets/videos/ai/sports-performance-dunk.mp4" },
             { title: "MMA", src: "assets/videos/ai/sports-performance-mma.mp4" },
@@ -2323,12 +3022,6 @@
             title: "Vo Leda",
             category: "Graphic design / Social media",
             files: [
-              "assets/design/tupa/vo-leda/vo-leda-01.png",
-              "assets/design/tupa/vo-leda/vo-leda-02.png",
-              "assets/design/tupa/vo-leda/vo-leda-03.png",
-              "assets/design/tupa/vo-leda/vo-leda-04.png",
-              "assets/design/tupa/vo-leda/vo-leda-05.png",
-              "assets/design/tupa/vo-leda/vo-leda-06.png",
               "assets/design/tupa/vo-leda/vo-leda-07.png",
               "assets/design/tupa/vo-leda/vo-leda-08.png",
               "assets/design/tupa/vo-leda/vo-leda-09.png",
@@ -2341,7 +3034,6 @@
             title: "Baurufer",
             category: "Graphic design / Social media",
             files: [
-              "assets/design/baurufer/baurufer-feed.png",
               "assets/design/tupa/baufer/baufer-01.png",
               "assets/design/tupa/baufer/baufer-02.png",
               "assets/design/tupa/baufer/baufer-03.png",
@@ -2358,23 +3050,18 @@
               "assets/design/arte-grafica/lendas-22.jpg",
               "assets/design/arte-grafica/desgarrados-06.jpg",
             ],
-            alt: "Graphic design for Lendas and Desgarrados"
+            alt: "Graphic design for Lendas e Desgarrados"
           },
           {
             title: "Cegarra Imoveis",
             category: "Graphic design / Social media",
             files: [
               "assets/design/tupa/cegarra-imoveis/cegarra-01.png",
-              "assets/design/tupa/cegarra-imoveis/cegarra-02.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-03.png",
-              "assets/design/tupa/cegarra-imoveis/cegarra-04.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-05.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-06.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-07.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-08.png",
-              "assets/design/tupa/cegarra-imoveis/cegarra-09.png",
-              "assets/design/tupa/cegarra-imoveis/cegarra-10.png",
-              "assets/design/tupa/cegarra-imoveis/cegarra-11.png",
               "assets/design/tupa/cegarra-imoveis/cegarra-12.png",
             ],
             alt: "Graphic design for Cegarra Imoveis"
@@ -2474,7 +3161,7 @@
       }
 
       function openShowreelViewer() {
-        showreelViewer.classList.remove("is-playing", "is-horizontal-mobile");
+        showreelViewer.classList.remove("is-playing", "is-ended", "is-horizontal-mobile");
         showreelPlayer.pause();
         showreelPlayer.removeAttribute("src");
         showreelPlayer.load();
@@ -2509,6 +3196,7 @@
         const source = format === "vertical" ? heroVideo?.dataset.mobileSrc : heroVideo?.dataset.desktopSrc;
         if (source) showreelPlayer.src = source;
         showreelViewer.classList.add("is-playing");
+        showreelViewer.classList.remove("is-ended");
         showreelViewer.setAttribute("aria-hidden", "false");
         showreelPlayer.currentTime = 0;
         showreelPlayer.muted = false;
@@ -2517,11 +3205,28 @@
         showreelPlayer.play().catch(() => {});
       }
 
+      function showShowreelEndPanel() {
+        showreelPlayer.pause();
+        showreelViewer.classList.remove("is-playing", "is-horizontal-mobile");
+        showreelViewer.classList.add("is-ended");
+        if (document.fullscreenElement) {
+          document.exitFullscreen().catch(() => {});
+        }
+        if (screen.orientation?.unlock) {
+          try { screen.orientation.unlock(); } catch (error) {}
+        }
+      }
+
+      function exploreAfterShowreel() {
+        closeShowreelViewer();
+        document.querySelector("#videos")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
       function closeShowreelViewer() {
         showreelPlayer.pause();
         showreelPlayer.removeAttribute("src");
         showreelPlayer.load();
-        showreelViewer.classList.remove("is-open", "is-playing", "is-horizontal-mobile");
+        showreelViewer.classList.remove("is-open", "is-playing", "is-ended", "is-horizontal-mobile");
         showreelViewer.setAttribute("aria-hidden", "true");
         if (document.fullscreenElement) {
           document.exitFullscreen().catch(() => {});
@@ -2650,13 +3355,13 @@
           const media = project.media || [];
           const clipMarkup = media.map((item) => {
             const videos = item.videos?.length ? item.videos : [{ title: item.title, src: item.src }];
-            const clipPoster = videoPoster(videos[0].src);
+            const clipPoster = item.poster || videoPoster(videos[0].src);
             const referenceCount = item.references?.length || 0;
             const videoCountLabel = videos.length === 1 ? "1 video" : `${videos.length} videos`;
             const fileCountLabel = referenceCount ? `${videos.length + referenceCount} files` : videoCountLabel;
             const videoMarkup = videos.map((video) => `
               <figure class="clip-video-item">
-                <video controls playsinline preload="metadata" poster="${videoPoster(video.src)}" src="${video.src}"></video>
+                <video controls playsinline preload="metadata" poster="${video.poster || item.poster || videoPoster(video.src)}" src="${video.src}"></video>
                 ${videos.length > 1 ? `<figcaption>${video.title}</figcaption>` : ""}
               </figure>
             `).join("");
@@ -2670,6 +3375,7 @@
                   <div class="clip-copy">
                     <p class="clip-meta">${fileCountLabel}</p>
                     <h4>${item.title}</h4>
+                    ${item.tag ? `<span class="clip-tag">${item.tag}</span>` : ""}
                   </div>
                 </summary>
                 <div class="clip-panel ${referenceCount ? "" : "is-single"}">
@@ -2722,12 +3428,14 @@
         let startY = 0;
         let scrollLeft = 0;
         let scrollTop = 0;
+        let pressedImage = null;
 
         rail.addEventListener("pointerdown", (event) => {
           if (event.target.closest("button, a")) return;
 
           isDragging = true;
           didDrag = false;
+          pressedImage = event.target.closest("img");
           startX = event.clientX;
           startY = event.clientY;
           scrollLeft = rail.scrollLeft;
@@ -2740,7 +3448,8 @@
           if (!isDragging) return;
           const deltaX = event.clientX - startX;
           const deltaY = event.clientY - startY;
-          if (Math.abs(deltaX) > 4 || Math.abs(deltaY) > 4) didDrag = true;
+          if (Math.abs(deltaX) > 10 || Math.abs(deltaY) > 10) didDrag = true;
+          if (!didDrag) return;
           event.preventDefault();
           if (axis === "y") {
             rail.scrollTop = scrollTop - deltaY;
@@ -2755,6 +3464,15 @@
           rail.classList.remove("is-dragging");
           if (rail.hasPointerCapture(event.pointerId)) {
             rail.releasePointerCapture(event.pointerId);
+          }
+          if (!didDrag && pressedImage) {
+            openLightbox(pressedImage);
+          }
+          pressedImage = null;
+          if (didDrag) {
+            window.setTimeout(() => {
+              didDrag = false;
+            }, 0);
           }
         };
 
@@ -2789,13 +3507,15 @@
           playShowreel(button.dataset.showreelFormat);
         });
       });
+      showreelPlayer.addEventListener("ended", showShowreelEndPanel);
+      showreelViewer.querySelector("[data-showreel-explore]")?.addEventListener("click", exploreAfterShowreel);
       document.querySelector("[data-showreel-open]")?.addEventListener("click", (event) => {
         event.preventDefault();
         openShowreelViewer();
         closeMenu();
       });
 
-      document.querySelector("[data-cv-open]").addEventListener("click", (event) => {
+      document.querySelector("[data-cv-open]")?.addEventListener("click", (event) => {
         event.preventDefault();
         openCvViewer();
       });
